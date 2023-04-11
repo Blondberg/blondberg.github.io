@@ -4,19 +4,40 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>This is the portfolio page for Blondberg!</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>This is the portfolio page for Blondberg!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
+    <nav id="navbar">
+        <button class="nav-butt">Home</button>
+        <button class="nav-butt">Projects</button>
+        <button class="nav-butt">About</button>
+        <button class="nav-butt" id="contact-button">Contact</button>
+    </nav>
+
+    <main>
+        <div class="hero-container">
+            <div class="hero-header">Hi, I am <br /> <span>Blondberg</span>!</div>
+            <div class="hero-subtext">Student, Software Developer, UX/UI Designer</div>
+            <div class="hero-links">
+                <a href="https://github.com/Blondberg" target="_blank"><img src="github-mark-white.png"></a>
+            </div>
+        </div>
+    </main>
+    <script src="main.js" type="text/javascript" async defer></script>
+</body>
+
 </html>
