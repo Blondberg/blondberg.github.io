@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'pontanosans': 'Pontano Sans',
+        'pacifico': 'Pacifico',
+
+      }
+    },
   },
   plugins: [],
 }

@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProjectGallery from "../components/ProjectGallery.vue";
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <ProjectGallery></ProjectGallery>
+  </main>
 </template>
