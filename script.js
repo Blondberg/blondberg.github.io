@@ -16,7 +16,6 @@ anim()
 addEventListener("mousemove", (e) => {
     cursor.x = e.clientX;
     cursor.y = e.clientY;
-    requestAnimationFrame(anim)
 })
 
 addEventListener(
@@ -83,6 +82,7 @@ function setSize() {
 }
 
 function anim() {
+    requestAnimationFrame(anim)
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.strokeStyle = "rgb(255 255 255)";
     context.lineWidth = 0.3
