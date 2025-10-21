@@ -1,4 +1,5 @@
 <script setup>
+import DownArrowIcon from "../assets/DownArrowIcon.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 
 
@@ -10,6 +11,7 @@ function handleClick() {
 
 const quotes = ref([])
 const randomQuote = ref()
+
 
 //  Canvas setup 
 const canvasRef = ref(null);
@@ -67,6 +69,8 @@ function setCanvasSize() {
     const canvas = canvasRef.value;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    cursor.x = Math.min(cursor.x, canvas.width);
+    cursor.y = Math.min(cursor.y, canvas.height);
 }
 
 function generateParticles(count) {
@@ -171,8 +175,9 @@ onMounted(async () => {
 
     // Mouse + touch movement
     const handleMouseMove = (e) => {
-        cursor.x = e.clientX;
-        cursor.y = e.clientY;
+        const rect = canvasRef.value.getBoundingClientRect();
+        cursor.x = (e.clientX - rect.left) * (canvasRef.value.width / rect.width);
+        cursor.y = (e.clientY - rect.top) * (canvasRef.value.height / rect.height);
     };
 
     const handleTouchMove = (e) => {
@@ -213,8 +218,20 @@ onUnmounted(() => {
                     }}</span>
             </div>
         </div>
-        <div class="border-white border w-10 h-10 rounded-full bottom-0 z-[9998]" @click="handleClick">
+        <div class="relative flex items-center justify-center group">
+            <div ref="sun"
+                class="border-white cursor-pointer border-2 w-10 h-10 rounded-full bottom-0 z-[9998] flex items-center justify-center animate-[spin_6s_linear_infinite] "
+                @click="handleClick">
+                <!-- Moon -->
+                <div ref="moon"
+                    class="absolute w-3 h-3 rounded-full bg-neutral-200 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 group-hover:left-1/2 group-hover:w-0 group-hover:h-0 delay-150 group-hover:delay-0 group-hover:-translate-x-1/2 transition-all duration-100 linear">
+                </div>
+
+            </div>
+            <DownArrowIcon
+                class="absolute w-0 h-0 mt-1 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 stroke-white stroke-3 group-hover:w-6 group-hover:h-6 transition-all duration-75 group-hover:delay-150 animate-[bounce_2s_linear_infinite]" />
         </div>
     </div>
 
 </template>
++

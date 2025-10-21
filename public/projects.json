@@ -7,16 +7,29 @@
             "Python",
             "PyCord",
             "Music"
-        ]
+        ],
+        "imagePath": "/images/Beatbob.svg"
     },
     {
         "title": "Sudoku Solver",
         "subtitle": "it does what it says",
-        "description": "One of my earlier deepdives into figuring out an algorithm. Curiosity lead to Wikipedia, which lead to backward propagation. <br/><br/>Now &ldquo;I&rdquo; can solve Sudokus.",
+        "description": "One of my earlier deepdives into figuring out an algorithm. Curiosity lead to Wikipedia, which lead to backward propagation. Now &ldquo;I&rdquo; can solve Sudokus.",
         "technologies": [
             "Python",
             "Algorithm",
             "Recursion"
-        ]
+        ],
+        "imagePath": "/images/SudokuSolver.svg"
+    },
+    {
+        "title": "ARAMinator",
+        "subtitle": "a Discord bot for randomizing teams and champions in LoL",
+        "description": "We wanted a quick way of randomizing teams and champions for our custom ARAM sessions in League of Legends&mdash;a Discord bot felt like the obvious answer.",
+        "technologies": [
+            "Python",
+            "Discord.py",
+            "API"
+        ],
+        "imagePath": "/images/ARAMinator.svg"
     }
 ]

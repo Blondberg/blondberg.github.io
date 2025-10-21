@@ -7,6 +7,12 @@ const sectionRef = ref(null)
 
 const projects = ref([])
 
+const projectColors = [
+    "border-orange",
+    "border-purple",
+    "border-satwhite"
+]
+
 
 defineExpose({
     sectionRef
@@ -31,10 +37,14 @@ onMounted(async () => {
             <p class="text-5xl font-roboto">Projects</p>
             <p class="text-base font-light">A highlight.</p>
         </div>
-        <div v-for="(project, index) in projects" :key="index">
-            <ProjectCard :description="project.description" :title="project.title" :subtitle="project.subtitle"
-                :ltr="index % 2 == 0" :technologies="project.technologies" :imagePath="project.imagePath">
+        <div class="grid grid-cols-3 gap-8">
+            <ProjectCard v-for="(project, index) in projects" :key="index" :description="project.description"
+                :title="project.title" :subtitle="project.subtitle" :ltr="index % 2 == 0"
+                :technologies="project.technologies" :imagePath="project.imagePath" :color="projectColors[index]">
             </ProjectCard>
+        </div>
+        <div class="self-end">
+            <RouterLink to="/">View more →</RouterLink>
         </div>
     </section>
 </template>

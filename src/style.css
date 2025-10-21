@@ -12,14 +12,22 @@
     --font-roboto: "Roboto Mono", monospace;
     --color-primary: #202020; 
     --color-satwhite: #DBDCD5;
-    --color-orange:#FBB566;
+    --color-orange:#FBD6AC;
+    --color-purple: #DDCBF1;
 
     --animate-float: float 5s ease-in-out infinite;
+    --animate-orbit: orbit 5s linear infinte;
 
     @keyframes float {
         0%,
         100% { transform: translateY(0);}
         50% { transform: translateY(-5px);}
+    }
+
+    @keyframes orbit {
+        100% {
+            transform: rotate(360deg);
+        }
     }
 }
 
