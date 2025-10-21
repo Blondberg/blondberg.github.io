@@ -1,12 +1,22 @@
 [
     {
-        "name": "Project 2",
-        "description": "Description 2",
-        "link": "www.youtube.com"
+        "title": "Beatbob",
+        "subtitle": "a Discord music bot",
+        "description": "There&#39;s a plethora of high-end Discord music bots out there&mdash;backed by years of development and hundreds of hours of manpower. So I asked myself: <br/><br/>&ldquo;Why not create my own?&rdquo;",
+        "technologies": [
+            "Python",
+            "PyCord",
+            "Music"
+        ]
     },
     {
-        "name": "Project 2",
-        "description": "Description 2",
-        "link": "www.youtube.com"
+        "title": "Sudoku Solver",
+        "subtitle": "it does what it says",
+        "description": "One of my earlier deepdives into figuring out an algorithm. Curiosity lead to Wikipedia, which lead to backward propagation. <br/><br/>Now &ldquo;I&rdquo; can solve Sudokus.",
+        "technologies": [
+            "Python",
+            "Algorithm",
+            "Recursion"
+        ]
     }
 ]
