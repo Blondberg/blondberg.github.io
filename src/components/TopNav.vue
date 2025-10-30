@@ -36,7 +36,10 @@ onUnmounted(() => {
         <RouterLink to="/" class="text-2xl font-pacifico absolute left-8">
             B
         </RouterLink>
-        <nav class="flex flex-row gap-10 p-3 text-lg font-light uppercase">
+        <nav class="flex flex-row gap-10 text-lg font-light uppercase transition-all duration-100 ease-in" :class="{
+            'p-0': scrolled,
+            'p-3': !scrolled
+        }">
             <RouterLink v-for="item in menuItems" :key="item.name" :to="item.to" class="transition-opacity duration-200"
                 :class="{
                     'opacity-50': hovered && hovered !== item.name,

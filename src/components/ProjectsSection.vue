@@ -8,9 +8,9 @@ const sectionRef = ref(null)
 const projects = ref([])
 
 const projectColors = [
-    "border-orange",
-    "border-purple",
-    "border-satwhite"
+    "border-orange hover:bg-orange",
+    "border-purple hover:bg-purple",
+    "border-satwhite hover:bg-satwhite"
 ]
 
 
@@ -40,7 +40,8 @@ onMounted(async () => {
         <div class="grid grid-cols-3 gap-8">
             <ProjectCard v-for="(project, index) in projects" :key="index" :description="project.description"
                 :title="project.title" :subtitle="project.subtitle" :ltr="index % 2 == 0"
-                :technologies="project.technologies" :imagePath="project.imagePath" :color="projectColors[index]">
+                :technologies="project.technologies" :imagePath="project.imagePath" :color="projectColors[index]"
+                :git="project.git" :svg="project.svg">
             </ProjectCard>
         </div>
         <div class="self-end">

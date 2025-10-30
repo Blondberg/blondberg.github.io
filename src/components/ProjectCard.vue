@@ -1,25 +1,29 @@
 <script setup>
-const { title, subtitle, description, technologies, ltr, imagePath } = defineProps({
+import GitHubIcon from "../assets/GitHubIcon.vue";
+
+const { title, subtitle, description, technologies, ltr, imagePath, svg, git } = defineProps({
     title: String,
     subtitle: String,
     description: String,
     technologies: Array,
     ltr: Boolean,
     imagePath: String,
-    color: String
+    color: String,
+    git: String,
+    svg: String
 });
 </script>
 
 <template>
 
-    <div class="group h-[300px] w-full flex flex-col p-8 gap-6 rounded-4xl text-white border hover:-translate-y-1 transition-all duration-300 ease-out"
+    <div class="group h-[300px] w-full flex flex-col p-8 gap-6 rounded-4xl bg-primary text-white border-2 hover:-translate-y-1 hover:text-primary transition-all duration-300 ease-out"
         :class="[color]">
         <!-- Top row -->
         <div class="flex flex-row gap-6 items-center">
             <!-- Image -->
-            <div class="bg-primary p-3 rounded-2xl stroke-white text-white fill-white">
-                <img v-if="imagePath" :src="imagePath" alt=""
-                    class="h-14 w-14 object-fill stroke-white text-white fill-white " />
+            <div class="px-3 rounded-2xl">
+                <!-- <img v-if="imagePath" :src="imagePath" alt="" class="h-14 w-14 object-fill" /> -->
+                <div class="w-14 h-14 object-fill flex flex-col justify-center items-center" v-html="svg"></div>
             </div>
             <!-- Title/subtitle -->
             <div>
@@ -30,52 +34,20 @@ const { title, subtitle, description, technologies, ltr, imagePath } = definePro
                     {{ subtitle }}
                 </p>
             </div>
-
         </div>
-        <!-- Bottom row -->
+        <!-- Description -->
         <div>
-            <!-- Description -->
-            <div>
-                <p class="text-sm font-pontano" v-html="description"></p>
+            <p class="text-sm font-pontano" v-html="description"></p>
 
-            </div>
-            <!-- CTA -->
-            <div>
-
-            </div>
         </div>
-    </div>
-
-
-    <div class="group w-full min-h-[312px] flex items-center justify-between gap-8 transition-all duration-500 hidden"
-        :class="[ltr ? 'flex-row' : 'flex-row-reverse']">
-        <!-- Image -->
-        <div class="flex-1 relative rounded-3xl overflow-hidden backdrop-blur-sm border ">
-            <img v-if="imagePath" :src="imagePath" alt=""
-                class="max-h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
-
-            <!-- Title / subtitle -->
-            <div class="absolute bottom-4 left-6 text-white">
-                <p class="text-lg font-semibold uppercase tracking-wider">
-                    {{ title }}
-                </p>
-                <p class="text-sm font-light">
-                    {{ subtitle }}
-                </p>
+        <!-- CTA -->
+        <div class="flex justify-self-end mt-auto">
+            <div class="flex gap-2 text-sm justify-center" v-if="git">
+                <GitHubIcon class="w-5 h-5 fill-white group-hover:fill-primary" /><a class="hover:not-only:underline"
+                    target="_blank" :href="git">GitHub</a>
             </div>
-        </div>
 
-        <!-- Description  -->
-        <div class="flex-2 text-left px-8 sm:px-12 py-6 transition-all duration-500 group-hover:translate-y-[-3px]"
-            :class="ltr ? 'text-left' : 'text-right'">
-            <p class="text-neutral-300 text-base font-pontano leading-relaxed" v-html="description"></p>
-
-            <div class="mt-6 flex flex-wrap gap-2" :class="ltr ? 'justify-start' : 'justify-end'">
-                <span v-for="(tech, i) in technologies" :key="i"
-                    class="px-3 py-1 text-xs uppercase rounded-full bg-white/10 border border-white/20 text-neutral-200 tracking-wide hover:bg-white/20 transition-all duration-300">
-                    {{ tech }}
-                </span>
-            </div>
+            <RouterLink class="text-sm ml-auto" to="/">More info →</RouterLink>
         </div>
     </div>
 </template>
