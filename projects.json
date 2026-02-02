@@ -1,7 +1,7 @@
 [
     {
         "title": "Beatbob",
-        "subtitle": "a Discord music bot",
+        "subtitle": "the mediocre Discord music bot",
         "description": "There&#39;s a plethora of high-end Discord music bots out there&mdash;backed by years of development and hundreds of hours of manpower. So I asked myself: <br/><br/>&ldquo;Why not create my own?&rdquo;",
         "technologies": [
             "Python",
