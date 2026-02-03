@@ -1,2 +1,0 @@
-# Beatbob
-This is *Beatbob*.

@@ -1,2 +1,0 @@
-# Araminator
-This is *ARAMinator*.
