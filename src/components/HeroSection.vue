@@ -210,13 +210,13 @@ onUnmounted(() => {
     <div class=""></div>
 
     <div class="flex-col flex items-center relative">
-      <div class="text-8xl">
+      <div class="text-4xl md:text-8xl">
         <span class="font-extralight font-inter">I am&nbsp;</span
         ><span class="font-pacifico">Blondberg</span>
       </div>
       <div
         v-if="randomQuote"
-        class="absolute top-full mt-10 right-4 text-lg font-inter text-right ml-auto max-w-[30ch] animate-float"
+        class="absolute top-full mt-10 right-4 text-md md:text-lg font-inter text-right ml-auto max-w-[30ch] animate-float"
       >
         <span class="font-extralight">&ldquo;{{ randomQuote.text }}&rdquo;</span
         ><br /><span v-if="randomQuote.credit"

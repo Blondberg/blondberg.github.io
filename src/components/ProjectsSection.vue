@@ -29,12 +29,15 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section ref="sectionRef" class="flex flex-col gap-11 w-full py-24">
+  <section
+    ref="sectionRef"
+    class="flex flex-col gap-11 container py-24 mx-auto px-6 md:px-0"
+  >
     <div class="text-5xl gap-3 flex-col flex">
       <p class="text-5xl font-roboto">Projects</p>
       <p class="text-base font-light">A highlight.</p>
     </div>
-    <div class="grid grid-cols-3 gap-8">
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
       <ProjectCard
         v-for="(project, index) in projects.slice(0, 3)"
         :key="index"
