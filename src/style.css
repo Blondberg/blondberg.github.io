@@ -10,10 +10,11 @@
     --font-pontano: "Pontano Sans", sans-serif;
     --font-pacifico: "Pacifico", cursive;
     --font-roboto: "Roboto Mono", monospace;
-    --color-primary: #202020; 
+    --color-primary: #202020;
     --color-satwhite: #DBDCD5;
     --color-orange:#FBD6AC;
     --color-purple: #DDCBF1;
+    --color-pink: #C08497;
 
     --animate-float: float 5s ease-in-out infinite;
     --animate-orbit: orbit 5s linear infinte;
@@ -31,9 +32,87 @@
     }
 }
 
+/* Base markdown container */
+.markdown {
+  @apply mx-auto leading-relaxed text-[1.05rem];
+}
+
+.markdown img {
+  @apply my-12 rounded-2xl border border-white/10 shadow-2xl;
+}
+.markdown h1 {
+  @apply font-pacifico text-6xl md:text-7xl mt-16 mb-6 text-satwhite;
+}
+
+.markdown h2 {
+  @apply  text-2xl;
+}
+
+.markdown h3 {
+  @apply text-xl;
+}
+
+.markdown blockquote {
+  @apply my-12;
+}
+
+.markdown h4 {
+  @apply font-inter text-xl mt-8 mb-2 text-satwhite;
+}
+
+.markdown p {
+  @apply my-4 text-satwhite/80;
+}
+
+.markdown a {
+  @apply text-purple underline underline-offset-4 decoration-purple/40 transition;
+}
+
+.markdown a:hover {
+  @apply text-orange decoration-orange;
+}
+
+.markdown code {
+  @apply font-roboto text-sm bg-white/10 px-1.5 py-0.5 rounded;
+}
+
+.markdown pre {
+  @apply my-8 p-5 rounded-xl overflow-x-auto bg-black/40 border border-white/10;
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0 text-[0.9rem];
+}
+
+.markdown hr {
+  @apply my-8 border-white/10;
+}
+
+.markdown table {
+  @apply w-full my-8 border-collapse text-sm;
+}
+
+.markdown th {
+  @apply text-left font-inter text-satwhite bg-white/10 px-4 py-2 border border-white/10;
+}
+
+.markdown td {
+  @apply px-4 py-2 border border-white/10 text-satwhite/80;
+}
+
+.markdown tr:nth-child(even) td {
+  @apply bg-white/5;
+}
+
+.markdown strong {
+  @apply text-satwhite font-semibold;
+}
+
+.markdown em {
+  @apply text-purple;
+}
+
 html {
-    @apply bg-primary;
-    @apply text-white;
-    @apply font-pontano;
+    @apply bg-primary text-white font-pontano;
 }
 
