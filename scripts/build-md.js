@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import MarkdownIt from "markdown-it";
 import Shiki from '@shikijs/markdown-it'
+import anchor from "markdown-it-anchor";
 
 const md = new MarkdownIt({
   html: true,
@@ -15,6 +16,16 @@ md.use(await Shiki({
         light: "one-dark-pro"
     }
 }));
+
+md.use(anchor, {
+  level: 2,
+  slugify: s =>
+    s
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/\s+/g, "-")
+});
 
 // const highlighter = await createHighlighter({ themes: ["vitesse-dark"], langs: ["python", "bash", "javascript"] });
 

@@ -41,7 +41,7 @@
   @apply my-12 rounded-2xl border border-white/10 shadow-2xl;
 }
 .markdown h1 {
-  @apply font-pacifico text-6xl md:text-7xl mt-16 mb-6 text-satwhite;
+  @apply font-pacifico mt-2 mb-6 text-satwhite text-3xl md:text-5xl;
 }
 
 .markdown h2 {

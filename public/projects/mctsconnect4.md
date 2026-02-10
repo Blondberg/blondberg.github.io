@@ -12,7 +12,7 @@ This project combines two ideas:
 
 ### 2. Monte Carlo Tree Search (MCTS)
 
-To decide moves, the bot uses <a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search" target="_blank" rel="noopener noreferrer">`Monte Carlo Tree Search`</a>, an algorithm that balances:
+To decide moves, the bot uses <a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search" target="_blank">`Monte Carlo Tree Search`</a>, an algorithm that balances:
 
 - **Exploration** – trying new or uncertain moves
 - **Exploitation** – favoring moves that have performed well in simulations
