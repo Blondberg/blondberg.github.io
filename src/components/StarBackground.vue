@@ -164,13 +164,13 @@ onMounted(async () => {
     handleResize = () => setCanvasSize()
 
     window.addEventListener('mousemove', handleMouseMove)
-    window.addEventListener('touchmove', handleTouchMove, { passive: false })
+    // window.addEventListener('touchmove', handleTouchMove)
     window.addEventListener('resize', handleResize)
 })
 // Clean up listeners when component unmounts
 onUnmounted(() => {
     window.removeEventListener('mousemove', handleMouseMove)
-    window.removeEventListener('touchmove', handleTouchMove)
+    // window.removeEventListener('touchmove', handleTouchMove)
     window.removeEventListener('resize', handleResize)
     cancelAnimationFrame(animationId)
 })
