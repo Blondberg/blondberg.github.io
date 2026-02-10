@@ -30,9 +30,9 @@ onUnmounted(() => {
 
 <template>
     <div
-        class="fixed top-0 flex flex-row items-center justify-between px-8 py-3 transition-all duration-100 ease-in -translate-x-1/2 bg-primary left-1/2"
+        class="fixed top-0 flex flex-row items-center justify-between px-8 py-3 transition-all duration-100 ease-in -translate-x-1/2 bg-primary md:bg-primary/0 left-1/2"
         :class="{
-            'w-full md:w-2xl md:rounded-full md:top-4 p-1 border-b md:border border-purple/15':
+            'w-full md:w-2xl md:rounded-full md:top-4 p-1 border-b md:border md:bg-primary/100 border-purple/15':
                 scrolled,
             'w-full p-3 border-satwhite/0 ': !scrolled,
         }"
