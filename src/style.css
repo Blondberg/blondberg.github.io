@@ -34,7 +34,11 @@
 
 /* Base markdown container */
 .markdown {
-  @apply mx-auto leading-relaxed text-[1.05rem];
+  @apply leading-relaxed text-[1.05rem];
+}
+
+.markdown li, .markdown ul {
+  @apply text-satwhite/80;
 }
 
 .markdown img {
