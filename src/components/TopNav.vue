@@ -10,7 +10,7 @@ const open = ref(false)
 const menuItems = [
     { name: 'Home', to: '/' },
     { name: 'Projects', to: '/projects' },
-    { name: 'About', to: '/' },
+    { name: 'About', to: '/#about' },
 ]
 
 // Change this value to your desired scroll threshold
@@ -34,7 +34,7 @@ onUnmounted(() => {
         :class="{
             'w-full md:w-2xl md:rounded-full md:top-4 p-1 border-b md:border md:bg-primary/100 border-purple/15':
                 scrolled,
-            'w-full p-3 border-satwhite/0 ': !scrolled,
+            'w-full p-3 border-purple/0 ': !scrolled,
         }"
     >
         <RouterLink to="/" class="text-2xl font-pacifico"> B </RouterLink>

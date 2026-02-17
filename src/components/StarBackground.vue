@@ -22,7 +22,7 @@ class Particle {
         this.x = Math.random() * canvasRef.value.width
         this.y = Math.random() * canvasRef.value.height
         this.size = Math.random() * 2
-        this.speed = Math.random()
+        this.speed = Math.random() * 0.5
         this.angle = Math.random() * Math.PI * 2
         this.xspeed = Math.cos(this.angle) * this.speed
         this.yspeed = Math.sin(this.angle) * this.speed

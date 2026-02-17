@@ -15,9 +15,11 @@
     "@vueuse/core": "^13.9.0",
     "@vueuse/motion": "^3.0.3",
     "autoprefixer": "^10.4.21",
+    "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
+    "markdown-it-front-matter": "^0.2.4",
     "postcss": "^8.5.6",
     "prettier": "^3.8.1",
     "prism-themes": "^1.9.0",
@@ -25,7 +27,8 @@
     "shiki": "^3.22.0",
     "tailwindcss": "^4.1.14",
     "vue": "^3.5.22",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.3",
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
     "@shikijs/markdown-it": "^3.22.0",

@@ -12,7 +12,6 @@ function handleClick() {
 const quotes = ref([])
 const randomQuote = ref()
 
-//  Lifecycle hooks
 onMounted(async () => {
     try {
         const res = await fetch('/quotes.json')
@@ -35,11 +34,13 @@ onMounted(async () => {
         <StarBackground />
         <div class=""></div>
 
-        <div class="flex-col flex items-center relative">
+        <div class="flex-col flex items-center relative mb-44">
+            <!-- Hero header -->
             <div class="text-4xl md:text-8xl">
                 <span class="font-extralight font-inter">I am&nbsp;</span
                 ><span class="font-pacifico">Blondberg</span>
             </div>
+            <!-- Hero quote -->
             <div
                 v-if="randomQuote"
                 class="absolute top-full mt-10 right-4 text-md md:text-lg font-inter text-right ml-auto max-w-[30ch] animate-float"
@@ -50,6 +51,7 @@ onMounted(async () => {
                 >
             </div>
         </div>
+        <!-- Hero scroll button -->
         <div class="relative flex items-center justify-center group">
             <div
                 ref="sun"

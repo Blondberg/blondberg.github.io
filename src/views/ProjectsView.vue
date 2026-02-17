@@ -33,7 +33,7 @@ onMounted(async () => {
 <template>
     <BaseSection ref="sectionRef" header="Projects">
         <StarBackground />
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-8">
             <ProjectCard
                 v-for="(project, index) in projects"
                 :key="index"

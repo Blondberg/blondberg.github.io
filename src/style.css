@@ -38,14 +38,14 @@
 }
 
 .markdown li, .markdown ul {
-  @apply text-satwhite/80;
+  @apply text-white;
 }
 
 .markdown img {
   @apply my-12 rounded-2xl border border-white/10 shadow-2xl;
 }
 .markdown h1 {
-  @apply font-pacifico mt-2 mb-6 text-satwhite text-3xl md:text-5xl;
+  @apply font-inter mt-2 mb-6 text-white font-extralight text-3xl md:text-5xl;
 }
 
 .markdown h2 {
@@ -61,15 +61,15 @@
 }
 
 .markdown h4 {
-  @apply font-inter text-xl mt-8 mb-2 text-satwhite;
+  @apply font-inter text-xl mt-8 mb-2 text-white;
 }
 
 .markdown p {
-  @apply my-4 text-satwhite/80;
+  @apply my-4 text-white;
 }
 
 .markdown a {
-  @apply text-purple underline underline-offset-4 decoration-purple/40 transition;
+  @apply text-white underline underline-offset-4 decoration-white/40 transition;
 }
 
 .markdown a:hover {
@@ -89,7 +89,7 @@
 }
 
 .markdown hr {
-  @apply my-8 border-white/10;
+  @apply my-8 border-white;
 }
 
 .markdown table {
@@ -97,11 +97,11 @@
 }
 
 .markdown th {
-  @apply text-left font-inter text-satwhite bg-white/10 px-4 py-2 border border-white/10;
+  @apply text-left font-inter text-white bg-white px-4 py-2 border border-white/10;
 }
 
 .markdown td {
-  @apply px-4 py-2 border border-white/10 text-satwhite/80;
+  @apply px-4 py-2 border border-white/10 text-white;
 }
 
 .markdown tr:nth-child(even) td {
@@ -109,7 +109,7 @@
 }
 
 .markdown strong {
-  @apply text-satwhite font-semibold;
+  @apply text-white font-semibold;
 }
 
 .markdown em {
