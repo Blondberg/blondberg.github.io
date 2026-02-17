@@ -1,5 +1,11 @@
-# MCTS Connect 4 Solver
-`Python` `Bit manipulation` `MCTS`
+---
+# Metadata
+title: MCTS Connect 4 Solver
+tags:
+    - Python
+    - Bit manipulation
+    - MCTS
+---
 
 The goal of this project was to build a high performing AI that solves Connect 4---balancing speed and performance.
 
