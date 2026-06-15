@@ -1,11 +1,11 @@
 <script setup>
 import GitHubIcon from '../assets/GitHubIcon.vue'
 
-const { title, subtitle, description, technologies, ltr, imagePath, svg, git } = defineProps({
+const { title, subtitle, description, tags, ltr, imagePath, svg, git } = defineProps({
     title: String,
     subtitle: String,
     description: String,
-    technologies: Array,
+    tags: Array,
     ltr: Boolean,
     imagePath: String,
     color: String,

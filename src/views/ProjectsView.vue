@@ -41,7 +41,7 @@ onMounted(async () => {
                 :title="project.title"
                 :subtitle="project.subtitle"
                 :ltr="index % 2 == 0"
-                :technologies="project.technologies"
+                :tags="project.tags"
                 :imagePath="project.imagePath"
                 :color="projectColors[index % 4]"
                 :git="project.git"

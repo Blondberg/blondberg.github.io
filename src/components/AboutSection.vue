@@ -1,6 +1,5 @@
 <script setup>
 import BaseSection from './BaseSection.vue'
-import ProjectCard from './ProjectCard.vue'
 
 import { ref, onMounted } from 'vue'
 

@@ -2,7 +2,6 @@
 import { ref, onMounted, nextTick, useTemplateRef } from 'vue'
 import { useRoute } from 'vue-router'
 import matter from 'gray-matter'
-
 import BaseSection from '../components/BaseSection.vue'
 
 import { onClickOutside, useIntersectionObserver } from '@vueuse/core'
@@ -14,6 +13,7 @@ import Prism from 'prismjs'
 import 'prism-themes/themes/prism-gruvbox-dark.css'
 import 'prismjs/components/prism-python'
 import YAML from 'yaml'
+import StarBackground from '../components/StarBackground.vue'
 
 const route = useRoute()
 const project = ref()
@@ -62,12 +62,11 @@ md.use(frontMatter, (fm) => {
 onMounted(async () => {
     try {
         const res = await fetch(import.meta.env.BASE_URL + `projects/${route.params.title}.md`)
-        if (!res.ok) throw new Error('Failed to load project md')
+        if (!res.ok)
+            throw new Error(`Failed to load project md from projects/${route.params.title}.md`)
         const raw = await res.text()
-        // const { content, data } = matter(raw)
 
         // Store metadata
-        // metadata.value = data
         project.value = md.render(raw)
 
         await nextTick()
@@ -103,6 +102,7 @@ onMounted(async () => {
 
 <template>
     <BaseSection class="md:pt-20 pt-0">
+        <StarBackground />
         <RouterLink to="/projects" class="bg-primary-dark">← Back to projects </RouterLink>
         <div class="flex flex-col gap-8 relative markdown">
             <!-- Project metadata -->
@@ -117,7 +117,7 @@ onMounted(async () => {
             <!-- lg:grid-cols-[1fr_260px] -->
             <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-8 relative">
                 <!-- Markdown content -->
-                <div class="grow">
+                <div class="grow bg-primary/95">
                     <div v-if="project" v-html="project" />
                 </div>
                 <!-- Table of contents -->
